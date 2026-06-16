@@ -3,81 +3,321 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เบเกอรี่แสนอบอุ่น | อบสดใหม่ทุกวัน</title>
+    <title>A Pink Rabbit + Bob | เค้กสไตล์โฮมเมดและเลมอนทาร์ต ย่านพระนคร</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;600&family=Charm&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;600&family=Charm:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
         <div class="nav-container">
-            <a href="#" class="logo">เบเกอรี่แสนอบอุ่น</a>
+            <a href="index.html" class="logo">A Pink Rabbit + Bob</a>
+            
+            <nav class="nav-links">
+                <a href="#">หน้าแรก</a>
+                <a href="#shop-menu-section">เมนูของเรา</a>
+                <a href="#about-section">บรรยากาศร้าน</a>
+                <a href="#contact-section">ติดต่อเรา</a>
+            </nav>
+
+            <div class="header-cart-status">
+                🍰 ตะกร้าสินค้า: <span id="cart-count-nav">0</span> ชิ้น
+            </div>
         </div>
     </header>
 
     <section class="hero">
         <div class="container">
-            <h1>เบเกอรี่แสนอบอุ่น</h1>
-            <p>อบสดใหม่จากเตาทุกวัน ด้วยความใส่ใจและวัตถุดิบชั้นดี เพื่อส่งต่อความสุขที่ทานได้ให้กับคุณ</p>
+            <h1>A Pink Rabbit + Bob</h1>
+            <p>สัมผัสความอร่อยของเค้กสไตล์โฮมเมดสูตรพิเศษและเลมอนทาร์ตสุดละมุน ในบรรยากาศแสนอบอุ่นและคลาสสิกใจกลางย่านพระนคร</p>
             <div class="btn-group">
-                <a href="#" class="btn btn-primary">🛒 สั่งซื้อออนไลน์</a>
-                <a href="https://maps.google.com/?cid=17268480994785146122" target="_blank" class="btn btn-secondary">📍 แผนที่ร้าน</a>
+                <a href="#shop-menu-section" class="btn btn-primary">🛒 สั่งซื้อออนไลน์</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=A+Pink+Rabbit+Bob+378+ถนนมหาราช+แขวงพระบรมมหาราชวัง+เขตพระนคร+กรุงเทพมหานคร+10200" target="_blank" class="btn btn-secondary">📍 แผนที่ร้าน</a>
             </div>
         </div>
     </section>
 
     <div class="container">
-        <section class="about">
-            <h2>ความอบอุ่นที่เริ่มจากในครัว</h2>
-            <p>จุดเริ่มต้นของร้านเราเกิดจากความรักในการทำขนม และความเชื่อที่ว่า 'เบเกอรี่ที่ดีที่สุด คือเบเกอรี่ที่กินแล้วรู้สึกมีความสุข' เราจึงตั้งใจคัดสรรวัตถุดิบที่สดใหม่ อบด้วยความพิถีพิถันในทุกขั้นตอน เหมือนทำให้คนในครอบครัวทาน</p>
+        <section id="about-section" class="about">
+            <h2>เค้กสไตล์โฮมเมดที่อบอวลด้วยความตั้งใจ</h2>
+            <p>ยินดีต้อนรับสู่พื้นที่แห่งความสุขของคนรักขนมหวาน เราตั้งใจรังสรรค์เค้กโฮมเมดหลากหลายสไตล์ด้วยวัตถุดิบชั้นดี ผสมผสานความพิถีพิถันในทุกขั้นตอน เพื่อให้ทุกคำที่ลิ้มลองเต็มไปด้วยมิติของรสชาติ ความอร่อย และความอบอุ่นหัวใจเหมือนทานขนมที่บ้าน</p>
         </section>
 
-        <section>
-            <h2 class="menu-title">🧁 เมนูแนะนำของเรา</h2>
-            <div class="menu-grid">
-                <div class="menu-card">
-                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=500" alt="ครัวซองต์" class="menu-img">
-                    <div class="menu-info">
-                        <div class="menu-name">ครัวซองต์เนยสดฝรั่งเศส</div>
-                        <div class="menu-desc">แป้งบางกรอบนอก นุ่มใน หอมเนยแท้ส่งตรงจากฝรั่งเศส</div>
-                    </div>
+        <section id="shop-menu-section" class="main-shop-layout">
+            
+            <div class="products-column">
+                <h2 class="menu-title">🧁 เมนูแนะนำที่ไม่ควรพลาด</h2>
+                
+                <div class="category-tabs">
+                    <button class="tab-btn active" onclick="filterCategory('all', event)">✨ ทั้งหมด</button>
+                    <button class="tab-btn" onclick="filterCategory('cake', event)">🍰 เค้กโฮมเมด</button>
+                    <button class="tab-btn" onclick="filterCategory('tart', event)">🍋 ทาร์ตยอดนิยม</button>
+                    <button class="tab-btn" onclick="filterCategory('drinks', event)">☕ เครื่องดื่มคราฟต์</button>
                 </div>
-                <div class="menu-card">
-                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=500" alt="เค้กช็อกโกแลต" class="menu-img">
-                    <div class="menu-info">
-                        <div class="menu-name">เค้กช็อกโกแลตฟัดจ์หน้านิ่ม</div>
-                        <div class="menu-desc">ช็อกโกแลตเข้มข้น หวานกำลังดี เนื้อเค้กนุ่มละมุนลิ้น</div>
+
+                <div class="menu-grid">
+                    
+                    <div class="menu-card" data-category="cake">
+                        <img src="img/เค้กน้ำชายามว่าง.jpg" alt="เค้กและน้ำชา" class="menu-img">
+                        <div class="menu-info">
+                            <div class="menu-name">เค้กและน้ำชาสูตรพิเศษ</div>
+                            <div class="price-tag">280 บาท</div>
+                            <div class="menu-desc">เซตเมนูสุดคลาสสิก เค้กโฮมเมดรสเลิศจับคู่เสิร์ฟกับน้ำชาคราฟต์ร้อนปรุงพิเศษอย่างลงตัว</div>
+                            <div class="item-options">
+                                <label><input type="checkbox" id="opt-set-1"> ขอรับเป็นชาร้อน (Refill)</label>
+                            </div>
+                            <button onclick="addCakeToCart('เซตเค้กและน้ำชาสูตรพิเศษ', 280, 'opt-set-1')" class="btn-add-item">เพิ่มลงตะกร้า</button>
+                        </div>
                     </div>
+
+                    <div class="menu-card" data-category="cake">
+                        <img src="img/เค้กทางร้าน.jpg" alt="เค้กโฮมเมด" class="menu-img">
+                        <div class="menu-info">
+                            <div class="menu-name">Homemade Signature Cake</div>
+                            <div class="price-tag">160 บาท</div>
+                            <div class="menu-desc">เนื้อเค้กเนียนนุ่ม สลับชั้นครีมสดและวัตถุดิบพรีเมียม เข้มข้น กลมกล่อม สไตล์โฮมเมดขนานแท้</div>
+                            <div class="item-options">
+                                <label><input type="checkbox" id="opt-cake-2"> ใส่กล่องของขวัญผูกโบว์ (+20 บ.)</label>
+                            </div>
+                            <button onclick="addCakeToCart('Homemade Signature Cake', 160, 'opt-cake-2', 20)" class="btn-add-item">เพิ่มลงตะกร้า</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="tart">
+                        <img src="img/เค้กทางร้าน.jpg" alt="เลมอนทาร์ต" class="menu-img">
+                        <div class="menu-info">
+                            <div class="menu-name">Meringue Lemon Tart</div>
+                            <div class="price-tag">150 บาท</div>
+                            <div class="menu-desc">เลมอนเคิร์ดรสเปรี้ยวอมหวานรีเฟรชใจ ท็อปปิ้งด้วยเมอแร็งก์เบิร์นไฟสีสวย แป้งทาร์ตกรุบกรอบหอมเนย</div>
+                            <div class="item-options">
+                                <label><input type="checkbox" id="opt-tart-3"> เพิ่มเลมอนสไลด์ตกแต่ง</label>
+                            </div>
+                            <button onclick="addCakeToCart('Meringue Lemon Tart', 150, 'opt-tart-3')" class="btn-add-item">เพิ่มลงตะกร้า</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="drinks">
+                        <img src="img/หน้าร้าน.jpg" alt="เครื่องดื่มสูตรเฉพาะ" class="menu-img">
+                        <div class="menu-info">
+                            <div class="menu-name">Crafted Cold Brew Coffee</div>
+                            <div class="price-tag">120 บาท</div>
+                            <div class="menu-desc">กาแฟสกัดเย็นคราฟต์รสชาตินุ่มนวล มิติซับซ้อน รังสรรค์มาให้ทานคู่กับเค้กชิ้นโปรดได้อย่างลงตัว</div>
+                            <div class="item-options">
+                                <select id="sweet-drink-4" class="select-sweet">
+                                    <option value="หวานปกติ">หวานปกติ (สูตรแนะนำ)</option>
+                                    <option value="หวานน้อย">หวานน้อย</option>
+                                    <option value="ไม่หวานเลย (0%)">ไม่หวานเลย (0%)</option>
+                                </select>
+                            </div>
+                            <button onclick="addDrinkToCart('Crafted Cold Brew Coffee', 120, 'sweet-drink-4')" class="btn-add-item">เพิ่มลงตะกร้า</button>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="menu-card">
-                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=500" alt="ขนมปังโฮลวีท" class="menu-img">
-                    <div class="menu-info">
-                        <div class="menu-name">ขนมปังโฮลวีทธัญพืช</div>
-                        <div class="menu-desc">นุ่มอร่อย ได้ประโยชน์เต็มคำจากธัญพืชเพื่อคนรักสุขภาพ</div>
+            </div>
+
+            <div class="sidebar-column">
+                <div class="cart-box">
+                    <div class="cart-header-flex">
+                        <span class="cart-title">🛍️ รายการสั่งซื้อของคุณ</span>
+                        <button type="button" class="btn-clear-cart" onclick="clearCart()">ล้างตะกร้า</button>
+                    </div>
+                    
+                    <div id="cart-list" class="cart-items-list">
+                        <div class="empty-cart-msg">ยังไม่มีขนมหวานในตะกร้าของคุณ</div>
+                    </div>
+
+                    <div class="payment-selection-box">
+                        <div class="payment-title">💵 ช่องทางการชำระเงิน</div>
+                        <div class="payment-options-group">
+                            <label class="payment-option-label">
+                                <input type="radio" name="cartPaymentMethod" value="cash" checked>
+                                <span>ชำระด้วยเงินสดหน้าร้าน</span>
+                            </label>
+                            <label class="payment-option-label">
+                                <input type="radio" name="cartPaymentMethod" value="transfer">
+                                <span>โอนเงินผ่านระบบธนาคาร</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="cart-summary">
+                        <div class="summary-row">
+                            <span>ยอดสุทธิรวม:</span>
+                            <span id="cart-total">0 ฿</span>
+                        </div>
+                        <button class="btn-checkout" onclick="checkoutAlert()">ยืนยันออเดอร์สั่งซื้อ</button>
                     </div>
                 </div>
             </div>
+
         </section>
     </div>
 
-    <footer class="contact-section">
+    <footer id="contact-section" class="contact-section">
         <div class="contact-grid">
             <div class="contact-box">
-                <h3>📍 ที่ตั้งร้านของเรา</h3>
-                <p>เลขที่ 20 ซอยวชิรธรรมสาธิต 6<br>แขวงบางนา เขตบางนา กรุงเทพฯ 10260</p>
+                <h3>📍 ที่ตั้งและช่องทางติดต่อ</h3>
+                <p><strong>A Pink Rabbit + Bob</strong><br>
+                เลขที่ 378 ถนนมหาราช แขวงพระบรมมหาราชวัง<br>
+                เขตพระนคร กรุงเทพมหานคร 10200<br>
+                <strong>📞 เบอร์โทรศัพท์:</strong> <a href="tel:0626398880">062-639-8880</a></p>
             </div>
             <div class="contact-box">
                 <h3>⏰ เวลาเปิด-ปิด</h3>
-                <p>จันทร์ - เสาร์: 10:30 - 20:30 น.<br><strong>(หยุดวันอาทิตย์)</strong></p>
+                <p>วันจันทร์ - วันอาทิตย์<br>
+                เวลา 09:00 น. - 20:00 น.<br>
+                (เปิดบริการทุกวัน)</p>
             </div>
             <div class="contact-box">
                 <h3>🛍️ บริการของเรา</h3>
-                <p>• ซื้อหน้าร้าน<br>• สั่งออนไลน์ / Delivery</p>
+                <p>• ซื้อกินที่ร้าน (Dine-in)<br>
+                • โทรสั่งกลับบ้าน (Takeaway)</p>
             </div>
         </div>
     </footer>
 
+    <script>
+        let cart = JSON.parse(localStorage.getItem('pink_rabbit_cart')) || [];
+
+        document.addEventListener("DOMContentLoaded", function() {
+            updateNavCount();
+            renderCart();
+        });
+
+        function filterCategory(category, e) {
+            const cards = document.querySelectorAll('.menu-card');
+            const tabs = document.querySelectorAll('.tab-btn');
+            
+            tabs.forEach(tab => tab.classList.remove('active'));
+            if(e && e.target) {
+                e.target.classList.add('active');
+            }
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function addCakeToCart(name, price, checkboxId, extraCost = 0) {
+            const checkElem = document.getElementById(checkboxId);
+            let finalPrice = price;
+            let finalName = name;
+            
+            if (checkElem && checkElem.checked) {
+                finalPrice += extraCost;
+                finalName += " (เลือกออปชันเสริม)";
+            }
+            pushToCartData(finalName, finalPrice);
+            
+            if (checkElem) checkElem.checked = false;
+        }
+
+        function addDrinkToCart(name, price, selectId) {
+            const selectElem = document.getElementById(selectId);
+            const sweetLevel = selectElem ? ` [${selectElem.value}]` : "";
+            const finalName = name + sweetLevel;
+            pushToCartData(finalName, price);
+            
+            if (selectElem) selectElem.selectedIndex = 0;
+        }
+
+        function pushToCartData(fullName, price) {
+            const existingItem = cart.find(item => item.name === fullName);
+            if (existingItem) {
+                existingItem.qty += 1;
+            } else {
+                cart.push({ name: fullName, price: price, qty: 1 });
+            }
+            saveAndRefreshCart();
+            alert(`เพิ่ม "${fullName}" ลงตะกร้าเรียบร้อยครับ!`);
+        }
+
+        function changeQty(name, amount) {
+            const item = cart.find(item => item.name === name);
+            if (item) {
+                item.qty += amount;
+                if (item.qty <= 0) {
+                    cart = cart.filter(i => i.name !== name);
+                }
+            }
+            saveAndRefreshCart();
+        }
+
+        function clearCart() {
+            if (cart.length === 0) return;
+            if (confirm("ต้องการล้างรายการสินค้าทั้งหมดในตะกร้าหรือไม่?")) {
+                cart = [];
+                saveAndRefreshCart();
+            }
+        }
+
+        function saveAndRefreshCart() {
+            localStorage.setItem('pink_rabbit_cart', JSON.stringify(cart));
+            updateNavCount();
+            renderCart();
+        }
+
+        function updateNavCount() {
+            const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+            document.getElementById('cart-count-nav').innerText = totalQty;
+        }
+
+        function renderCart() {
+            const listContainer = document.getElementById('cart-list');
+            const totalDisplay = document.getElementById('cart-total');
+            
+            if (cart.length === 0) {
+                listContainer.innerHTML = '<div class="empty-cart-msg">ยังไม่มีขนมหวานในตะกร้าของคุณ</div>';
+                totalDisplay.innerText = '0 ฿';
+                return;
+            }
+
+            let html = '';
+            let totalPrice = 0;
+
+            cart.forEach(item => {
+                const itemTotal = item.price * item.qty;
+                totalPrice += itemTotal;
+                html += `
+                    <div class="cart-item-row">
+                        <div class="item-details-text">
+                            <strong>${item.name}</strong><br>
+                            <span class="item-price-span">${item.price} บาท</span>
+                        </div>
+                        <div class="item-control-buttons">
+                            <button type="button" class="cart-qty-btn" onclick="changeQty('${item.name}', -1)">-</button>
+                            <span class="qty-number">${item.qty}</span>
+                            <button type="button" class="cart-qty-btn" onclick="changeQty('${item.name}', 1)">+</button>
+                            <span class="item-total-span">${itemTotal} บ.</span>
+                        </div>
+                    </div>
+                `;
+            });
+
+            listContainer.innerHTML = html;
+            totalDisplay.innerText = `${totalPrice} ฿`;
+        }
+
+        function checkoutAlert() {
+            if (cart.length === 0) {
+                alert('❌ ไม่สามารถทำรายการได้ เนื่องจากไม่มีสินค้าอยู่ในตะกร้าครับ');
+                return;
+            }
+            const paymentRadio = document.querySelector('input[name="cartPaymentMethod"]:checked');
+            const paymentMethod = paymentRadio.value === 'cash' ? 'เงินสดหน้าร้าน' : 'โอนเงินผ่านธนาคาร';
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+            alert(`🎉 บันทึกออเดอร์เรียบร้อยแล้ว!\n\nรูปแบบชำระเงิน: ${paymentMethod}\nยอดสั่งซื้อสุทธิ: ${totalPrice} บาท\n\nระบบจัดเตรียมออเดอร์ของคุณให้เรียบร้อยแล้ว ขอบคุณครับ!`);
+            cart = [];
+            saveAndRefreshCart();
+        }
+    </script>
 </body>
 </html>
