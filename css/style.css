@@ -1,522 +1,473 @@
-/* ==========================================
-   1. VARIABLES & RESET STYLE
-   ========================================== */
-:root {
-    --bg-main: #FDFBF7;           /* สีครีมขาวนวลตา */
-    --bg-surface: #FFFFFF;        /* สีขาวบริสุทธิ์ สำหรับการ์ดและกล่อง */
-    --bg-cream-dark: #F4ECE1;     /* สีครีมอุ่นเข้มขึ้น สำหรับส่วนไฮไลท์ */
-    
-    --color-brown-deep: #5C4033;  /* สีน้ำตาลเข้มโกโก้ (ข้อความหลัก / ส่วนหัว) */
-    --color-brown-latte: #A67B5B; /* สีน้ำตาลลาเต้ (เส้นขอบ / ปุ่มรอง) */
-    --color-matcha: #7A8B7B;      /* สีเขียวมัทฉะหม่น (สีที่เพิ่มเข้ามาเพื่อตัดและเน้น) */
-    --color-matcha-hover: #637264;
-    
-    --text-main: #4A3E3D;         /* สีตัวอักษรทั่วไป (น้ำตาลเข้มปนเทา อ่านง่าย) */
-    --border-color: #E8DFD1;      /* สีเส้นขอบนุ่มๆ */
-}
-
+/* ========================================== */
+/* รีเซ็ตค่าพื้นฐาน (Reset CSS)                 */
+/* ========================================== */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Anuphan', sans-serif;
-    background-color: var(--bg-main);
-    color: var(--text-main);
+    color: #4a4a4a;
+    background-color: #fdfbf7;
     line-height: 1.6;
 }
 
 .container {
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
-/* ==========================================
-   2. HEADER & NAVIGATION
-   ========================================== */
+/* เส้นใต้หัวข้อ */
+.title-line {
+    border: none;
+    height: 3px;
+    width: 60px;
+    background-color: #d4a373;
+    margin: 10px auto 30px auto;
+}
+
+/* ========================================== */
+/* ส่วนหัว (Header & Navigation)               */
+/* ========================================== */
 header {
-    background-color: var(--bg-surface);
-    box-shadow: 0 2px 12px rgba(92, 64, 51, 0.06);
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     position: sticky;
     top: 0;
-    z-index: 100;
-    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
 }
 
-.nav-container {
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px 20px;
+    padding: 15px 0;
 }
 
-.logo {
-    font-family: 'Charm', cursive;
-    font-size: 26px;
+.logo a {
+    font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-brown-deep);
+    color: #d4a373;
     text-decoration: none;
 }
 
-.nav-links a {
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
     text-decoration: none;
-    color: var(--text-main);
-    margin: 0 15px;
-    font-weight: 400;
+    color: #666;
+    font-weight: 500;
     transition: color 0.3s;
 }
 
-.nav-links a:hover {
-    color: var(--color-brown-latte);
+nav ul li a:hover, nav ul li a.active {
+    color: #d4a373;
 }
 
-.header-cart-status {
-    background-color: var(--bg-cream-dark);
-    color: var(--color-brown-deep);
-    padding: 8px 18px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    border: 1px solid var(--border-color);
-}
-
-/* ==========================================
-   3. HERO SECTION
-   ========================================== */
+/* ========================================== */
+/* แบนเนอร์ด้านบนสุด (Hero Section)               */
+/* ========================================== */
 .hero {
-    background: linear-gradient(135deg, #F5EBE1 0%, #E6D5C3 100%);
-    padding: 90px 0;
-    text-align: center;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.hero h1 {
-    font-family: 'Charm', cursive;
-    font-size: 52px;
-    color: var(--color-brown-deep);
-    margin-bottom: 15px;
-}
-
-.hero p {
-    font-size: 17px;
-    max-width: 620px;
-    margin: 0 auto 35px auto;
-    color: #6E5E53;
-}
-
-.btn-group {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=1200') no-repeat center center/cover;
+    height: 60vh;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
 }
 
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+/* แบนเนอร์ขนาดเล็กสำหรับหน้าเมนูย่อย */
+.menu-banner {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 1px solid #f1e5d9;
+}
+
+.menu-banner h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.menu-banner p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* ========================================== */
+/* ปุ่มสำหรับแผนที่ (Button)                     */
+/* ========================================== */
 .btn {
     display: inline-block;
     padding: 12px 30px;
-    border-radius: 25px;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 15px;
+    border-radius: 25px;
+    font-weight: 500;
     transition: all 0.3s;
+    cursor: pointer;
+    border: none;
 }
 
 .btn-primary {
-    background-color: var(--color-brown-deep);
-    color: var(--bg-main);
+    background-color: #d4a373;
+    color: #fff;
 }
 
 .btn-primary:hover {
-    background-color: #422E24;
-    transform: translateY(-2px);
+    background-color: #b98453;
 }
 
-.btn-secondary {
-    background-color: transparent;
-    color: var(--color-brown-deep);
-    border: 2px solid var(--color-brown-deep);
+/* ========================================== */
+/* สิ่งอำนวยความสะดวก (Amenities)               */
+/* ========================================== */
+.amenities {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    margin-top: -30px;
+    position: relative;
+    z-index: 10;
 }
 
-.btn-secondary:hover {
-    background-color: var(--color-brown-deep);
-    color: white;
-    transform: translateY(-2px);
+.amenity-item {
+    font-weight: 500;
+    color: #d4a373;
+    margin: 10px;
 }
 
-/* ==========================================
-   4. ABOUT SECTION
-   ========================================== */
+.amenity-item i {
+    margin-right: 5px;
+    font-size: 1.1rem;
+}
+
+/* ========================================== */
+/* เกี่ยวกับร้าน (About)                         */
+/* ========================================== */
 .about {
+    padding: 60px 0;
     text-align: center;
-    padding: 60px 0 30px 0;
 }
 
-.about h2 {
-    font-size: 28px;
-    color: var(--color-brown-deep);
-    margin-bottom: 15px;
-}
-
-.about p {
+.about-text {
     max-width: 800px;
     margin: 0 auto;
-    color: #7A6B62;
 }
 
-/* ==========================================
-   5. SHOP LAYOUT & PRODUCTS
-   ========================================== */
-.main-shop-layout {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 35px;
-    padding: 30px 0 80px 0;
+.about-text h2 {
+    font-size: 2rem;
 }
 
-@media (max-width: 991px) {
-    .main-shop-layout {
-        grid-template-columns: 1fr;
-    }
+.about-text p {
+    font-size: 1.1rem;
+    color: #666;
 }
 
-.menu-title {
-    font-size: 22px;
-    margin-bottom: 20px;
-    color: var(--color-brown-deep);
+/* ========================================== */
+/* แถบทางลัดเลือกหมวดหมู่เมนู (Summary Bar)       */
+/* ========================================== */
+.menu-summary-bar {
+    background-color: #ffffff;
+    padding: 15px 0;
+    border-bottom: 1px solid #f1e5d9;
+    position: sticky;
+    top: 75px; /* เกาะท้าย Header */
+    z-index: 999;
 }
 
-/* Category Tabs */
-.category-tabs {
+.summary-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.total-badge {
+    font-size: 0.95rem;
+    background-color: #fefae0;
+    color: #b98453;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-weight: 600;
+    border: 1px solid #f4ebd0;
+}
+
+.category-links {
     display: flex;
     gap: 10px;
-    margin-bottom: 30px;
     flex-wrap: wrap;
 }
 
-.tab-btn {
-    background-color: var(--bg-surface);
-    border: 1px solid var(--border-color);
-    color: var(--text-main);
-    padding: 8px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 14px;
-    transition: all 0.2s;
+.link-item {
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #555;
+    border: 1px solid #e9ecef;
+    transition: all 0.2s ease;
 }
 
-.tab-btn.active, .tab-btn:hover {
-    background-color: var(--color-brown-latte);
-    color: white;
-    border-color: var(--color-brown-latte);
+.link-item:hover {
+    background-color: #fefae0;
+    color: #b98453;
+    border-color: #d4a373;
 }
 
-/* Menu Grid Card */
+/* ========================================== */
+/* โครงสร้างเมนูและบล็อกหมวดหมู่ (Menu Section)    */
+/* ========================================== */
+.menu-section {
+    background-color: #fefae0; /* โทนเหลืองครีมเดิมของร้าน */
+    padding: 60px 0;
+}
+
+.menu-container {
+    padding: 30px 0 60px 0;
+}
+
+.menu-category-block {
+    margin-bottom: 50px;
+    scroll-margin-top: 150px; /* ป้องกันแท็บทางลัดบังหัวข้อเวลาคลิกเลื่อน */
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #d4a373;
+    padding-bottom: 12px;
+}
+
+.category-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.category-title i {
+    color: #d4a373;
+    margin-right: 8px;
+}
+
+.category-title .en-title {
+    font-size: 0.95rem;
+    color: #777;
+    font-weight: 400;
+    margin-left: 6px;
+}
+
+.count-badge {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Grid จัดเรียงการ์ดเมนูให้อัตโนมัติและสมส่วน */
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 25px;
+    margin-top: 20px;
 }
 
-.menu-card {
-    background-color: var(--bg-surface);
+/* ========================================== */
+/* การ์ดเมนูแนะนำ (Menu Card)                  */
+/* ========================================== */
+.menu-card, .menu-item-card {
+    background-color: #ffffff;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 16px rgba(92, 64, 51, 0.03);
-    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
     transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.menu-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(92, 64, 51, 0.07);
-}
-
-.menu-img {
-    width: 100%;
-    height: 210px;
-    object-fit: cover;
-    background-color: #EFECE7;
-}
-
-.menu-info {
-    padding: 20px;
-}
-
-.menu-name {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--color-brown-deep);
-    margin-bottom: 6px;
-}
-
-.price-tag {
-    color: var(--color-brown-latte);
-    font-weight: 600;
-    font-size: 16px;
-    margin-bottom: 12px;
-}
-
-.menu-desc {
-    font-size: 13px;
-    color: #7A6B62;
-    height: 60px;
-    overflow: hidden;
-    margin-bottom: 15px;
-}
-
-.item-options {
-    margin-bottom: 15px;
-    font-size: 13px;
-    background: var(--bg-cream-dark);
-    padding: 10px 12px;
-    border-radius: 6px;
-    color: var(--color-brown-deep);
-}
-
-.select-sweet {
-    width: 100%;
-    padding: 6px;
-    border-radius: 4px;
-    border: 1px solid var(--border-color);
-    background-color: var(--bg-surface);
-    color: var(--text-main);
-    font-family: inherit;
-}
-
-.btn-add-item {
-    width: 100%;
-    background-color: var(--color-brown-deep);
-    color: white;
-    border: none;
-    padding: 11px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-    font-family: inherit;
-    transition: background-color 0.2s;
-}
-
-.btn-add-item:hover {
-    background-color: var(--color-brown-latte);
-}
-
-/* ==========================================
-   6. SIDEBAR CART
-   ========================================== */
-.cart-box {
-    background-color: var(--bg-surface);
-    border-radius: 12px;
-    padding: 25px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 4px 16px rgba(92, 64, 51, 0.03);
-    position: sticky;
-    top: 100px;
-}
-
-.cart-header-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-}
-
-.cart-title {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--color-brown-deep);
-}
-
-.btn-clear-cart {
-    background: none;
-    border: none;
-    color: #A39385;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 13px;
-    transition: color 0.2s;
-}
-
-.btn-clear-cart:hover {
-    color: #C0392B;
-}
-
-.cart-items-list {
-    max-height: 250px;
-    overflow-y: auto;
-    margin-bottom: 20px;
-}
-
-.empty-cart-msg {
-    text-align: center;
-    color: #BAAFA6;
-    padding: 30px 0;
-    font-size: 14px;
-}
-
-.cart-item-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px dashed var(--border-color);
-    font-size: 14px;
-}
-
-.item-price-span {
-    font-size: 12px;
-    color: #8A7B70;
-}
-
-.item-control-buttons {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.cart-qty-btn {
-    background-color: var(--bg-cream-dark);
-    border: 1px solid var(--border-color);
-    color: var(--color-brown-deep);
-    width: 24px;
-    height: 24px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.2s;
-}
-
-.cart-qty-btn:hover {
-    background-color: var(--color-brown-latte);
-    color: white;
-}
-
-.qty-number {
-    font-weight: 600;
-    min-width: 15px;
-    text-align: center;
-}
-
-.item-total-span {
-    font-weight: 600;
-    color: var(--color-brown-deep);
-    margin-left: 5px;
-    min-width: 55px;
-    text-align: right;
-}
-
-.payment-selection-box {
-    background-color: var(--bg-cream-dark);
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-.payment-title {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: var(--color-brown-deep);
-}
-
-.payment-options-group {
     display: flex;
     flex-direction: column;
-    gap: 8px;
 }
 
-.payment-option-label {
-    font-size: 13px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    color: var(--text-main);
+.menu-card:hover, .menu-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(212, 163, 115, 0.15);
 }
 
-.cart-summary {
-    border-top: 1px solid var(--border-color);
-    padding-top: 15px;
-}
-
-.summary-row {
-    display: flex;
-    justify-content: space-between;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: var(--color-brown-deep);
-}
-
-#cart-total {
-    color: var(--color-brown-latte);
-    font-size: 22px;
-}
-
-.btn-checkout {
+/* กล่องล็อกสัดส่วนภาพแบบเรตินา (16:9) ภาพไม่เบี้ยว */
+.menu-img-card, .menu-img-box {
     width: 100%;
-    background-color: var(--color-matcha); /* ใช้สีเขียวมัทฉะสำหรับปุ่มยืนยันเพื่อให้เด่นและน่ากด */
-    color: white;
-    border: none;
-    padding: 13px;
-    border-radius: 25px;
-    font-size: 16px;
+    position: relative;
+    padding-top: 56.25%; /* ล็อกสัดส่วนสี่เหลี่ยมผืนผ้า */
+    overflow: hidden;
+    background-color: #e9ecef;
+}
+
+.menu-img-card img, .menu-img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ตัวล็อกสำคัญ: แก้ปัญหาภาพบิดเบี้ยวหรือยืด */
+    display: block;
+}
+
+.menu-info, .menu-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* บังคับให้ความสูงเนื้อหาเท่ากันทุกการ์ด */
+}
+
+.menu-info h3, .menu-details h3 {
+    margin-bottom: 8px;
+    font-size: 1.15rem;
     font-weight: 600;
-    cursor: pointer;
-    font-family: inherit;
-    box-shadow: 0 4px 12px rgba(122, 139, 123, 0.3);
-    transition: all 0.2s;
+    color: #333;
 }
 
-.btn-checkout:hover {
-    background-color: var(--color-matcha-hover);
-    transform: translateY(-1px);
+.menu-info p, .menu-details p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 15px;
+    flex-grow: 1; /* ดันปุ่มราคาลงข้างล่างให้ตรงกันอัตโนมัติ */
 }
 
-/* ==========================================
-   7. FOOTER STYLE
-   ========================================== */
-footer {
-    background-color: var(--color-brown-deep);
-    color: #D3C9C1;
+.menu-info .price, .menu-price {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #d4a373; /* สีทอง/น้ำตาลเดิมของร้าน */
+    margin-top: auto;
+}
+
+/* ========================================== */
+/* ช่องทางติดต่อและแผนที่ (Contact & Map)           */
+/* ========================================== */
+.contact-section {
+    background-color: #333;
+    color: #fff;
     padding: 60px 0;
-    margin-top: 40px;
 }
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 35px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
 }
 
-.contact-box h3 {
-    color: #FDFBF7;
-    font-size: 18px;
+.contact-info h2 {
+    font-size: 2rem;
+}
+
+.contact-item {
     margin-bottom: 15px;
-    border-left: 3px solid var(--color-brown-latte);
-    padding-left: 10px;
+    display: flex;
+    align-items: flex-start;
 }
 
-.contact-box p {
-    font-size: 14px;
-    line-height: 1.8;
+.contact-item i {
+    margin-right: 12px;
+    margin-top: 5px;
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
 }
 
-.contact-box a {
-    color: var(--color-brown-latte);
-    text-decoration: none;
-    font-weight: 600;
+.contact-map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.contact-box a:hover {
-    color: #FDFBF7;
+.map-placeholder {
+    background-color: #444;
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px dashed #666;
+}
+
+.map-placeholder i {
+    font-size: 3rem;
+    color: #d4a373;
+    margin-bottom: 15px;
+}
+
+.map-placeholder h3 {
+    margin-bottom: 8px;
+}
+
+.map-placeholder p {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+/* ========================================== */
+/* ส่วนท้าย (Footer)                            */
+/* ========================================== */
+footer {
+    background-color: #222;
+    color: #888;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.85rem;
+}
+
+/* ========================================== */
+/* การตอบสนองบนมือถือ (Responsive)              */
+/* ========================================== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    nav ul {
+        margin-top: 15px;
+    }
+    nav ul li {
+        margin: 0 10px;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .summary-box {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+    .category-links {
+        justify-content: center;
+    }
+    .category-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
 }

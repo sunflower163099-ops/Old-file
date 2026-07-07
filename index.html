@@ -3,321 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Pink Rabbit + Bob | เค้กสไตล์โฮมเมดและเลมอนทาร์ต ย่านพระนคร</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Sweet & Sour Bakery | ร้านเบเกอรี่อ่อนนุช</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;600&family=Charm:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo">A Pink Rabbit + Bob</a>
-            
-            <nav class="nav-links">
-                <a href="#">หน้าแรก</a>
-                <a href="#shop-menu-section">เมนูของเรา</a>
-                <a href="#about-section">บรรยากาศร้าน</a>
-                <a href="#contact-section">ติดต่อเรา</a>
-            </nav>
-
-            <div class="header-cart-status">
-                🍰 ตะกร้าสินค้า: <span id="cart-count-nav">0</span> ชิ้น
+        <div class="container navbar">
+            <div class="logo">
+                <a href="#"><i class="fa-solid fa-cake-candles"></i> Sweet & Sour</a>
             </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">หน้าแรก</a></li>
+                    <li><a href="about.html">เกี่ยวกับร้าน</a></li>
+                    <li><a href="menu.html">เมนูแนะนำ</a></li>
+                    <li><a href="order.html">สั่งซื้อออนไลน์/จองโต๊ะ</a></li>
+                    <li><a href="contact.html">ติดต่อเรา</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <section class="hero">
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>เบเกอรี่อบสดใหม่ทุกวัน</h1>
+            <p>พื้นที่ความสุขของทุกคนในครอบครัว ย่านอ่อนนุช</p>
+        </div>
+    </section>
+
+    <section class="amenities container">
+        <div class="amenity-item"><i class="fa-solid fa-square-parking"></i> มีที่จอดรถฟรี</div>
+        <div class="amenity-item"><i class="fa-solid fa-wifi"></i> ฟรี Wi-Fi บริการ</div>
+        <div class="amenity-item"><i class="fa-solid fa-paw"></i> สัตว์เลี้ยงเข้าได้</div>
+        <div class="amenity-item"><i class="fa-solid fa-child"></i> เหมาะสำหรับเด็กๆ</div>
+        <div class="amenity-item"><i class="fa-solid fa-users"></i> เหมาะสำหรับมาเป็นกลุ่ม</div>
+    </section>
+
+    <section id="about" class="about container">
+        <div class="about-text">
+            <h2>เกี่ยวกับร้าน Sweet & Sour</h2>
+            <hr class="title-line">
+            <p>ต้อนรับสู่พื้นที่แห่งความสุขและกลิ่นหอมอบอวลจากเตา! ร้านเบเกอรี่ของเราตั้งใจรังสรรค์ขนมและเบเกอรี่ทุกชิ้นด้วยความใส่ใจ อบสดใหม่ทุกวันจากวัตถุดิบคุณภาพเยี่ยม เราออกแบบร้านให้มีบรรยากาศอบอุ่น เป็นกันเอง เพื่อเป็นพื้นที่พักผ่อนสำหรับทุกคน ไม่ว่าจะมานั่งทำงาน ชวนแก๊งเพื่อนมาสังสรรค์ หรือพาสัตว์เลี้ยงตัวโปรดมาเช็คอิน เราพร้อมยินดีต้อนรับทุกท่านทุกวันครับ</p>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
         <div class="container">
-            <h1>A Pink Rabbit + Bob</h1>
-            <p>สัมผัสความอร่อยของเค้กสไตล์โฮมเมดสูตรพิเศษและเลมอนทาร์ตสุดละมุน ในบรรยากาศแสนอบอุ่นและคลาสสิกใจกลางย่านพระนคร</p>
-            <div class="btn-group">
-                <a href="#shop-menu-section" class="btn btn-primary">🛒 สั่งซื้อออนไลน์</a>
-                <a href="https://www.google.com/maps/search/?api=1&query=A+Pink+Rabbit+Bob+378+ถนนมหาราช+แขวงพระบรมมหาราชวัง+เขตพระนคร+กรุงเทพมหานคร+10200" target="_blank" class="btn btn-secondary">📍 แผนที่ร้าน</a>
+            <h2 class="section-title">เมนูแนะนำห้ามพลาด</h2>
+            <hr class="title-line">
+            
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <div class="menu-img-card">
+                        <img src="img/Strawberry Shortcake.webp" alt="Strawberry Shortcake">
+                    </div>
+                    <div class="menu-info">
+                        <h3>Strawberry Shortcake</h3>
+                        <p>เค้กสตรอว์เบอร์รี่เนื้อนุ่มละมุน ครีมสดแท้รสกลมกล่อมและสตรอว์เบอร์รี่ลูกโต หวานกำลังดี</p>
+                        <span class="price">120 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-img-card">
+                        <img src="img/Premium Butter Croissant.jpg" alt="Premium Butter Croissant">
+                    </div>
+                    <div class="menu-info">
+                        <h3>Premium Butter Croissant</h3>
+                        <p>ครัวซองต์เนยสดแท้นำเข้า อบสดใหม่กรอบนอกนุ่มใน หอมกลิ่นเนยฟุ้งกระจาย</p>
+                        <span class="price">85 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-img-card">
+                        <img src="img/Hokkaido Soft Milk Bun.jpg" alt="Hokkaido Soft Milk Bun">
+                    </div>
+                    <div class="menu-info">
+                        <h3>Hokkaido Soft Milk Bun</h3>
+                        <p>ขนมปังนมสดฮอกไกโด เนื้อนุ่มฟูเคี้ยวละลายในปาก โรยไอซิ่งหวานบางๆ ทานง่าย เหมาะสำหรับเด็กๆ</p>
+                        <span class="price">65 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-img-card">
+                        <img src="img/Signature Iced Latte.jpg" alt="Signature Iced Latte">
+                    </div>
+                    <div class="menu-info">
+                        <h3>Signature Iced Latte</h3>
+                        <p>กาแฟลาเต้เย็นสูตรกลมกล่อม เมล็ดกาแฟคัดพิเศษ ทานคู่กับเบเกอรี่เข้ากันอย่างลงตัว</p>
+                        <span class="price">95 ฿</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <div class="container">
-        <section id="about-section" class="about">
-            <h2>เค้กสไตล์โฮมเมดที่อบอวลด้วยความตั้งใจ</h2>
-            <p>ยินดีต้อนรับสู่พื้นที่แห่งความสุขของคนรักขนมหวาน เราตั้งใจรังสรรค์เค้กโฮมเมดหลากหลายสไตล์ด้วยวัตถุดิบชั้นดี ผสมผสานความพิถีพิถันในทุกขั้นตอน เพื่อให้ทุกคำที่ลิ้มลองเต็มไปด้วยมิติของรสชาติ ความอร่อย และความอบอุ่นหัวใจเหมือนทานขนมที่บ้าน</p>
-        </section>
-
-        <section id="shop-menu-section" class="main-shop-layout">
-            
-            <div class="products-column">
-                <h2 class="menu-title">🧁 เมนูแนะนำที่ไม่ควรพลาด</h2>
-                
-                <div class="category-tabs">
-                    <button class="tab-btn active" onclick="filterCategory('all', event)">✨ ทั้งหมด</button>
-                    <button class="tab-btn" onclick="filterCategory('cake', event)">🍰 เค้กโฮมเมด</button>
-                    <button class="tab-btn" onclick="filterCategory('tart', event)">🍋 ทาร์ตยอดนิยม</button>
-                    <button class="tab-btn" onclick="filterCategory('drinks', event)">☕ เครื่องดื่มคราฟต์</button>
+    <section id="contact" class="contact-section">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <h2>ติดต่อเรา</h2>
+                <hr class="title-line" style="margin: 10px 0 20px 0;">
+                <p class="contact-item"><i class="fa-solid fa-clock"></i> <strong>เวลาทำการ:</strong> เปิดทุกวัน: 09:30 - 20:30 น.</p>
+                <p class="contact-item"><i class="fa-solid fa-location-dot"></i> <strong>ที่อยู่:</strong> 486 ถ. อ่อนนุช แขวงสวนหลวง เขตสวนหลวง กรุงเทพมหานคร 10250</p>
+                <p class="contact-item"><i class="fa-solid fa-phone"></i> <strong>เบอร์โทรศัพท์:</strong> 02-XXX-XXXX</p>
+                <p class="contact-item"><i class="fa-brands fa-line" style="color: #06C755;"></i> <strong>Line:</strong> @sweetandsour</p>
+                <p class="contact-item"><i class="fa-brands fa-facebook" style="color: #1877F2;"></i> <strong>Facebook:</strong> Sweet & Sour Bakery</p>
+                <p class="contact-item"><i class="fa-solid fa-square-parking"></i> บริเวณร้านมีที่จอดรถรองรับฟรี</p>
+            </div>
+            <div class="contact-map">
+                <div class="map-placeholder">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <h3>แผนที่นำทางร้าน</h3>
+                    <p>คลิกด้านล่างเพื่อเปิดแผนที่นำทางบน Google Maps</p>
+                    <a href="https://www.google.com/maps/place/Kopang+Bakery+by+Tomoroo/@13.7117279,100.6055312,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29fc7f4eb0619:0xdf280f669f68a466!8m2!3d13.7117227!4d100.6081061!16s%2Fg%2F11fppfpvh_?entry=ttu&g_ep=EgoyMDI2MDYyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-primary"><i class="fa-solid fa-diamond-turn-right"></i> เปิด Google Maps</a>
                 </div>
-
-                <div class="menu-grid">
-                    
-                    <div class="menu-card" data-category="cake">
-                        <img src="img/เค้กน้ำชายามว่าง.jpg" alt="เค้กและน้ำชา" class="menu-img">
-                        <div class="menu-info">
-                            <div class="menu-name">เค้กและน้ำชาสูตรพิเศษ</div>
-                            <div class="price-tag">280 บาท</div>
-                            <div class="menu-desc">เซตเมนูสุดคลาสสิก เค้กโฮมเมดรสเลิศจับคู่เสิร์ฟกับน้ำชาคราฟต์ร้อนปรุงพิเศษอย่างลงตัว</div>
-                            <div class="item-options">
-                                <label><input type="checkbox" id="opt-set-1"> ขอรับเป็นชาร้อน (Refill)</label>
-                            </div>
-                            <button onclick="addCakeToCart('เซตเค้กและน้ำชาสูตรพิเศษ', 280, 'opt-set-1')" class="btn-add-item">เพิ่มลงตะกร้า</button>
-                        </div>
-                    </div>
-
-                    <div class="menu-card" data-category="cake">
-                        <img src="img/เค้กทางร้าน.jpg" alt="เค้กโฮมเมด" class="menu-img">
-                        <div class="menu-info">
-                            <div class="menu-name">Homemade Signature Cake</div>
-                            <div class="price-tag">160 บาท</div>
-                            <div class="menu-desc">เนื้อเค้กเนียนนุ่ม สลับชั้นครีมสดและวัตถุดิบพรีเมียม เข้มข้น กลมกล่อม สไตล์โฮมเมดขนานแท้</div>
-                            <div class="item-options">
-                                <label><input type="checkbox" id="opt-cake-2"> ใส่กล่องของขวัญผูกโบว์ (+20 บ.)</label>
-                            </div>
-                            <button onclick="addCakeToCart('Homemade Signature Cake', 160, 'opt-cake-2', 20)" class="btn-add-item">เพิ่มลงตะกร้า</button>
-                        </div>
-                    </div>
-
-                    <div class="menu-card" data-category="tart">
-                        <img src="img/เค้กทางร้าน.jpg" alt="เลมอนทาร์ต" class="menu-img">
-                        <div class="menu-info">
-                            <div class="menu-name">Meringue Lemon Tart</div>
-                            <div class="price-tag">150 บาท</div>
-                            <div class="menu-desc">เลมอนเคิร์ดรสเปรี้ยวอมหวานรีเฟรชใจ ท็อปปิ้งด้วยเมอแร็งก์เบิร์นไฟสีสวย แป้งทาร์ตกรุบกรอบหอมเนย</div>
-                            <div class="item-options">
-                                <label><input type="checkbox" id="opt-tart-3"> เพิ่มเลมอนสไลด์ตกแต่ง</label>
-                            </div>
-                            <button onclick="addCakeToCart('Meringue Lemon Tart', 150, 'opt-tart-3')" class="btn-add-item">เพิ่มลงตะกร้า</button>
-                        </div>
-                    </div>
-
-                    <div class="menu-card" data-category="drinks">
-                        <img src="img/หน้าร้าน.jpg" alt="เครื่องดื่มสูตรเฉพาะ" class="menu-img">
-                        <div class="menu-info">
-                            <div class="menu-name">Crafted Cold Brew Coffee</div>
-                            <div class="price-tag">120 บาท</div>
-                            <div class="menu-desc">กาแฟสกัดเย็นคราฟต์รสชาตินุ่มนวล มิติซับซ้อน รังสรรค์มาให้ทานคู่กับเค้กชิ้นโปรดได้อย่างลงตัว</div>
-                            <div class="item-options">
-                                <select id="sweet-drink-4" class="select-sweet">
-                                    <option value="หวานปกติ">หวานปกติ (สูตรแนะนำ)</option>
-                                    <option value="หวานน้อย">หวานน้อย</option>
-                                    <option value="ไม่หวานเลย (0%)">ไม่หวานเลย (0%)</option>
-                                </select>
-                            </div>
-                            <button onclick="addDrinkToCart('Crafted Cold Brew Coffee', 120, 'sweet-drink-4')" class="btn-add-item">เพิ่มลงตะกร้า</button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="sidebar-column">
-                <div class="cart-box">
-                    <div class="cart-header-flex">
-                        <span class="cart-title">🛍️ รายการสั่งซื้อของคุณ</span>
-                        <button type="button" class="btn-clear-cart" onclick="clearCart()">ล้างตะกร้า</button>
-                    </div>
-                    
-                    <div id="cart-list" class="cart-items-list">
-                        <div class="empty-cart-msg">ยังไม่มีขนมหวานในตะกร้าของคุณ</div>
-                    </div>
-
-                    <div class="payment-selection-box">
-                        <div class="payment-title">💵 ช่องทางการชำระเงิน</div>
-                        <div class="payment-options-group">
-                            <label class="payment-option-label">
-                                <input type="radio" name="cartPaymentMethod" value="cash" checked>
-                                <span>ชำระด้วยเงินสดหน้าร้าน</span>
-                            </label>
-                            <label class="payment-option-label">
-                                <input type="radio" name="cartPaymentMethod" value="transfer">
-                                <span>โอนเงินผ่านระบบธนาคาร</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="cart-summary">
-                        <div class="summary-row">
-                            <span>ยอดสุทธิรวม:</span>
-                            <span id="cart-total">0 ฿</span>
-                        </div>
-                        <button class="btn-checkout" onclick="checkoutAlert()">ยืนยันออเดอร์สั่งซื้อ</button>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-    </div>
-
-    <footer id="contact-section" class="contact-section">
-        <div class="contact-grid">
-            <div class="contact-box">
-                <h3>📍 ที่ตั้งและช่องทางติดต่อ</h3>
-                <p><strong>A Pink Rabbit + Bob</strong><br>
-                เลขที่ 378 ถนนมหาราช แขวงพระบรมมหาราชวัง<br>
-                เขตพระนคร กรุงเทพมหานคร 10200<br>
-                <strong>📞 เบอร์โทรศัพท์:</strong> <a href="tel:0626398880">062-639-8880</a></p>
-            </div>
-            <div class="contact-box">
-                <h3>⏰ เวลาเปิด-ปิด</h3>
-                <p>วันจันทร์ - วันอาทิตย์<br>
-                เวลา 09:00 น. - 20:00 น.<br>
-                (เปิดบริการทุกวัน)</p>
-            </div>
-            <div class="contact-box">
-                <h3>🛍️ บริการของเรา</h3>
-                <p>• ซื้อกินที่ร้าน (Dine-in)<br>
-                • โทรสั่งกลับบ้าน (Takeaway)</p>
             </div>
         </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Sweet & Sour Bakery. All Rights Reserved. Powered by Sogoodweb Template 434</p>
     </footer>
 
-    <script>
-        let cart = JSON.parse(localStorage.getItem('pink_rabbit_cart')) || [];
-
-        document.addEventListener("DOMContentLoaded", function() {
-            updateNavCount();
-            renderCart();
-        });
-
-        function filterCategory(category, e) {
-            const cards = document.querySelectorAll('.menu-card');
-            const tabs = document.querySelectorAll('.tab-btn');
-            
-            tabs.forEach(tab => tab.classList.remove('active'));
-            if(e && e.target) {
-                e.target.classList.add('active');
-            }
-
-            cards.forEach(card => {
-                if (category === 'all' || card.getAttribute('data-category') === category) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        function addCakeToCart(name, price, checkboxId, extraCost = 0) {
-            const checkElem = document.getElementById(checkboxId);
-            let finalPrice = price;
-            let finalName = name;
-            
-            if (checkElem && checkElem.checked) {
-                finalPrice += extraCost;
-                finalName += " (เลือกออปชันเสริม)";
-            }
-            pushToCartData(finalName, finalPrice);
-            
-            if (checkElem) checkElem.checked = false;
-        }
-
-        function addDrinkToCart(name, price, selectId) {
-            const selectElem = document.getElementById(selectId);
-            const sweetLevel = selectElem ? ` [${selectElem.value}]` : "";
-            const finalName = name + sweetLevel;
-            pushToCartData(finalName, price);
-            
-            if (selectElem) selectElem.selectedIndex = 0;
-        }
-
-        function pushToCartData(fullName, price) {
-            const existingItem = cart.find(item => item.name === fullName);
-            if (existingItem) {
-                existingItem.qty += 1;
-            } else {
-                cart.push({ name: fullName, price: price, qty: 1 });
-            }
-            saveAndRefreshCart();
-            alert(`เพิ่ม "${fullName}" ลงตะกร้าเรียบร้อยครับ!`);
-        }
-
-        function changeQty(name, amount) {
-            const item = cart.find(item => item.name === name);
-            if (item) {
-                item.qty += amount;
-                if (item.qty <= 0) {
-                    cart = cart.filter(i => i.name !== name);
-                }
-            }
-            saveAndRefreshCart();
-        }
-
-        function clearCart() {
-            if (cart.length === 0) return;
-            if (confirm("ต้องการล้างรายการสินค้าทั้งหมดในตะกร้าหรือไม่?")) {
-                cart = [];
-                saveAndRefreshCart();
-            }
-        }
-
-        function saveAndRefreshCart() {
-            localStorage.setItem('pink_rabbit_cart', JSON.stringify(cart));
-            updateNavCount();
-            renderCart();
-        }
-
-        function updateNavCount() {
-            const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
-            document.getElementById('cart-count-nav').innerText = totalQty;
-        }
-
-        function renderCart() {
-            const listContainer = document.getElementById('cart-list');
-            const totalDisplay = document.getElementById('cart-total');
-            
-            if (cart.length === 0) {
-                listContainer.innerHTML = '<div class="empty-cart-msg">ยังไม่มีขนมหวานในตะกร้าของคุณ</div>';
-                totalDisplay.innerText = '0 ฿';
-                return;
-            }
-
-            let html = '';
-            let totalPrice = 0;
-
-            cart.forEach(item => {
-                const itemTotal = item.price * item.qty;
-                totalPrice += itemTotal;
-                html += `
-                    <div class="cart-item-row">
-                        <div class="item-details-text">
-                            <strong>${item.name}</strong><br>
-                            <span class="item-price-span">${item.price} บาท</span>
-                        </div>
-                        <div class="item-control-buttons">
-                            <button type="button" class="cart-qty-btn" onclick="changeQty('${item.name}', -1)">-</button>
-                            <span class="qty-number">${item.qty}</span>
-                            <button type="button" class="cart-qty-btn" onclick="changeQty('${item.name}', 1)">+</button>
-                            <span class="item-total-span">${itemTotal} บ.</span>
-                        </div>
-                    </div>
-                `;
-            });
-
-            listContainer.innerHTML = html;
-            totalDisplay.innerText = `${totalPrice} ฿`;
-        }
-
-        function checkoutAlert() {
-            if (cart.length === 0) {
-                alert('❌ ไม่สามารถทำรายการได้ เนื่องจากไม่มีสินค้าอยู่ในตะกร้าครับ');
-                return;
-            }
-            const paymentRadio = document.querySelector('input[name="cartPaymentMethod"]:checked');
-            const paymentMethod = paymentRadio.value === 'cash' ? 'เงินสดหน้าร้าน' : 'โอนเงินผ่านธนาคาร';
-            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-
-            alert(`🎉 บันทึกออเดอร์เรียบร้อยแล้ว!\n\nรูปแบบชำระเงิน: ${paymentMethod}\nยอดสั่งซื้อสุทธิ: ${totalPrice} บาท\n\nระบบจัดเตรียมออเดอร์ของคุณให้เรียบร้อยแล้ว ขอบคุณครับ!`);
-            cart = [];
-            saveAndRefreshCart();
-        }
-    </script>
 </body>
 </html>

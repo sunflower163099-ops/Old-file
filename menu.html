@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เมนูแนะนำทั้งหมด (39 เมนู) | Sweet & Sour Bakery</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+
+    <!-- แถบเมนูด้านบน (Navigation Bar) -->
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                <a href="index.html"><i class="fa-solid fa-cake-candles"></i> Sweet & Sour</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">หน้าแรก</a></li>
+                    <li><a href="about.html">เกี่ยวกับร้าน</a></li>
+                    <li><a href="menu.html" class="active">เมนูแนะนำ</a></li>
+                    <li><a href="order.html">สั่งซื้อออนไลน์/จองโต๊ะ</a></li>
+                    <li><a href="contact.html">ติดต่อเรา</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ส่วนแบนเนอร์หัวข้อหลัก (Hero Banner) -->
+    <section class="menu-banner">
+        <div class="container banner-content">
+            <h1>เมนูแนะนำทั้งหมดของเรา</h1>
+            <p>คัดสรรวัตถุดิบชั้นเลิศ อบสดใหม่จากเตาทุกวัน เพื่อความสุขในทุกคำของคุณ</p>
+            <a href="#cat-cakes" class="btn-banner-primary">สำรวจเมนูอาหาร</a>
+        </div>
+    </section>
+
+    <!-- แถบสรุปจำนวนเมนูและลิงก์ด่วน (Summary Navigation Bar) -->
+    <section class="menu-summary-bar">
+        <div class="container summary-box">
+            <div class="total-badge">
+                <i class="fa-solid fa-cookie"></i> เมนูแนะนำทั้งหมด <span class="highlight-num">39</span> รายการ
+            </div>
+            <div class="category-links">
+                <a href="#cat-cakes" class="link-item active-cat"><i class="fa-solid fa-cake-candles"></i> เค้ก & เบเกอรี่ (10)</a>
+                <a href="#cat-breads" class="link-item"><i class="fa-solid fa-bread-slice"></i> ขนมปังอบสด (10)</a>
+                <a href="#cat-cookies" class="link-item"><i class="fa-solid fa-cookie-bite"></i> คุกกี้ & ขนมชิ้นเล็ก (7)</a>
+                <a href="#cat-drinks" class="link-item"><i class="fa-solid fa-mug-hot"></i> เครื่องดื่มสูตรพิเศษ (12)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- พื้นที่แสดงเมนูทั้งหมด (Main Content Container) -->
+    <main class="container menu-container">
+        
+        <!-- SECTION 1: เค้กและเบเกอรี่ชิ้น (10 เมนู) -->
+        <section id="cat-cakes" class="menu-category-block">
+            <div class="category-header">
+                <h2 class="category-title">
+                    <i class="fa-solid fa-cake-candles"></i> เค้กและเบเกอรี่ชิ้น <span class="en-title">(Cakes & Pastries)</span>
+                </h2>
+                <span class="count-badge">10 รายการ</span>
+            </div>
+            
+            <div class="menu-grid">
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <span class="item-badge hot">Best Seller 🔥</span>
+                        <img src="img/Strawberry Shortcake.webp" alt="Strawberry Shortcake">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Strawberry Shortcake</h3>
+                        <p class="menu-desc">เค้กสตรอว์เบอร์รี่เนื้อนุ่มสลับชั้นครีมสดรสละมุน ตกแต่งด้วยผลไม้สดชิ้นโต</p>
+                        <span class="menu-price">120 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Chocolate Fudge Cake.jpg" alt="Chocolate Fudge Cake">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Chocolate Fudge Cake</h3>
+                        <p class="menu-desc">เค้กช็อกโกแลตหน้านิ่ม เข้มข้นหวานกำลังดี รสชาติดาร์กช็อกโกแลตแท้</p>
+                        <span class="menu-price">110 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <span class="item-badge recommend">Recommend ✨</span>
+                        <img src="img/New York Cheesecake.jpg" alt="New York Cheesecake">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">New York Cheesecake</h3>
+                        <p class="menu-desc">ชีสเค้กสไตล์นิวยอร์ก เนื้อแน่นหอมชีสเต็มคำ ฐานพายกรุบกรอบสูตรเฉพาะ</p>
+                        <span class="menu-price">135 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Blueberry Cheese Pie.jpg" alt="Blueberry Cheese Pie">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Blueberry Cheese Pie</h3>
+                        <p class="menu-desc">บลูเบอร์รี่ชีสพาย ราดซอสซอสบลูเบอร์รี่เข้มข้นรสเปรี้ยวอมหวาน</p>
+                        <span class="menu-price">115 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Red Velvet Cake.jpg" alt="Red Velvet Cake">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Red Velvet Cake</h3>
+                        <p class="menu-desc">เค้กเรดเวลดเวทสีแดงสะดุดตา สลับชั้นด้วยครีมชีสรสกลมกล่อม</p>
+                        <span class="menu-price">125 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Matcha Red Bean Cake.jpg" alt="Matcha Red Bean Cake">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Matcha Red Bean Cake</h3>
+                        <p class="menu-desc">เค้กชาเขียวมัทฉะแท้เข้มข้น ผสมผสานชั้นถั่วแดงกวนสไตล์ญี่ปุ่น</p>
+                        <span class="menu-price">130 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Banoffee Pie.jpg" alt="Banoffee Pie">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Banoffee Pie</h3>
+                        <p class="menu-desc">บานอฟฟี่พาย อัดแน่นด้วยกล้วยหอม ซอสคาราเมล และครีมสดโรยผงโกโก้</p>
+                        <span class="menu-price">105 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Carrot Cake.jpg" alt="Carrot Cake">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Carrot Cake</h3>
+                        <p class="menu-desc">เค้กแครอทสูตรโฮมเมด ผสมถั่วและผลไม้แห้ง ท็อปครีมชีสละมุน</p>
+                        <span class="menu-price">120 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Coconut Fresh Cream Cake.jpg" alt="Coconut Fresh Cream Cake">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Coconut Fresh Cream Cake</h3>
+                        <p class="menu-desc">เค้กมะพร้าวอ่อนครีมสด เนื้อเค้กชิฟฟอนนุ่มเบา หอมกลิ่นมะพร้าวธรรมชาติ</p>
+                        <span class="menu-price">115 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Classic Tiramisu.jpg" alt="Classic Tiramisu">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Classic Tiramisu</h3>
+                        <p class="menu-desc">ทีรามิสุสไตล์อิตาเลียนแท้ ชุ่มฉ่ำรสกาแฟเอสเพรสโซ่และมาสคาร์โปนชีส</p>
+                        <span class="menu-price">140 ฿</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: ขนมปังอบสดใหม่ (10 เมนู) -->
+        <section id="cat-breads" class="menu-category-block">
+            <div class="category-header">
+                <h2 class="category-title">
+                    <i class="fa-solid fa-bread-slice"></i> ขนมปังอบสดใหม่ <span class="en-title">(Freshly Baked Breads)</span>
+                </h2>
+                <span class="count-badge">10 รายการ</span>
+            </div>
+            
+            <div class="menu-grid">
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <span class="item-badge hot">Best Seller 🔥</span>
+                        <img src="img/Butter Croissant.jpg" alt="Butter Croissant">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Butter Croissant</h3>
+                        <p class="menu-desc">ครัวซองต์เนยสดฝรั่งเศส อบกรอบนอก นุ่มใน เป็นเลเยอร์ชั้นสวยงาม</p>
+                        <span class="menu-price">75 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Almond Croissant.jpg" alt="Almond Croissant">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Almond Croissant</h3>
+                        <p class="menu-desc">ครัวซองต์สอดไส้ครีมอัลมอนด์หวานกำลังดี โรยหน้าด้วยอัลมอนด์สไลด์อบกรอบ</p>
+                        <span class="menu-price">95 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Premium Shokupan.jpg" alt="Premium Shokupan">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Premium Shokupan</h3>
+                        <p class="menu-desc">ขนมปังปอนด์สไตล์ญี่ปุ่น เนื้อเหนียวนุ่มชุ่มชื้น หอมกลิ่นนมสดแท้</p>
+                        <span class="menu-price">120 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <span class="item-badge recommend">Recommend ✨</span>
+                        <img src="img/Garlic Cream Cheese Bread.jpg" alt="Garlic Cream Cheese Bread">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Garlic Cream Cheese Bread</h3>
+                        <p class="menu-desc">ขนมปังกระเทียมครีมชีสเกาหลี รสชาติเข้มข้น หอมกระเทียมและชีสเยิ้มๆ</p>
+                        <span class="menu-price">89 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Classic Cinnamon Roll.jpg" alt="Classic Cinnamon Roll">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Classic Cinnamon Roll</h3>
+                        <p class="menu-desc">ชินนามอนโรลหอมกลิ่นอบเชยคัดพิเศษ ราดหน้าด้วยครีมชีสไอซิ่งสูตรเข้มข้น</p>
+                        <span class="menu-price">65 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Pain au Chocolat.jpg" alt="Pain au Chocolat">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Pain au Chocolat</h3>
+                        <p class="menu-desc">พาสทรีครัวซองต์สไตล์ฝรั่งเศส สอดไส้ช็อกโกแลตแท่งรสเข้มข้นสองแถวเต็มๆ</p>
+                        <span class="menu-price">85 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Classic Sourdough.jpg" alt="Classic Sourdough">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Classic Sourdough</h3>
+                        <p class="menu-desc">ขนมปังซาวโดว์หมักธรรมชาติ เปลือกนอกกรอบหนา เนื้อในนุ่มเหนียวมีมิติ</p>
+                        <span class="menu-price">140 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Sausage Twist Bread.jpg" alt="Sausage Twist Bread">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Sausage Twist Bread</h3>
+                        <p class="menu-desc">ขนมปังพันไส้กรอกไก่รมควันเกรดพรีเมียม โรยหน้าด้วยมายองเนสและซอสฝรั่ง</p>
+                        <span class="menu-price">45 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Hokkaido Milk Bun.jpg" alt="Hokkaido Milk Bun">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Hokkaido Milk Bun</h3>
+                        <p class="menu-desc">ขนมปังนมสดฮอกไกโด เนื้อนุ่มนิ่มสอดไส้ครีมนมสดล้นทะลัก หวานน้อย</p>
+                        <span class="menu-price">55 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Whole Wheat Raisin Bread.jpg" alt="Whole Wheat Raisin Bread">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Whole Wheat Raisin Bread</h3>
+                        <p class="menu-desc">ขนมปังโฮลวีตเพื่อสุขภาพ ผสมลูกเกดดำเม็ดโต เคี้ยวสนุกได้ประโยชน์เต็มคำ</p>
+                        <span class="menu-price">75 ฿</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: คุกกี้และขนมชิ้นเล็ก (7 เมนู) -->
+        <section id="cat-cookies" class="menu-category-block">
+            <div class="category-header">
+                <h2 class="category-title">
+                    <i class="fa-solid fa-cookie-bite"></i> คุกกี้และขนมชิ้นเล็ก <span class="en-title">(Cookies & Small Treats)</span>
+                </h2>
+                <span class="count-badge">7 รายการ</span>
+            </div>
+            
+            <div class="menu-grid">
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <span class="item-badge hot">Best Seller 🔥</span>
+                        <img src="img/Soft Chocolate Chip Cookie.jpg" alt="Soft Chocolate Chip Cookie">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Soft Chocolate Chip Cookie</h3>
+                        <p class="menu-desc">ซอฟต์คุกกี้เนื้อนิ่มฉ่ำเนย อัดแน่นด้วยช็อกโกแลตชิพแท้ละลายเยิ้มๆ</p>
+                        <span class="menu-price">45 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Premium Macarons.jpg" alt="Premium Macarons">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Premium Macarons</h3>
+                        <p class="menu-desc">มาการองสไตล์ฝรั่งเศส (กล่อง 4 ชิ้น) คละรสชาติผลไม้และช็อกโกแลต</p>
+                        <span class="menu-price">160 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <span class="item-badge recommend">Recommend ✨</span>
+                        <img src="img/Dark Chocolate Brownie.jpg" alt="Dark Chocolate Brownie">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Dark Chocolate Brownie</h3>
+                        <p class="menu-desc">ฟัดจ์บราวนี่เนื้อหนึบหนับ เข้มข้นระดับดับเบิ้ลช็อกโกแลต หน้าฟิล์มสวยงาม</p>
+                        <span class="menu-price">60 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Danish Butter Cookies.jpg" alt="Danish Butter Cookies">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Danish Butter Cookies</h3>
+                        <p class="menu-desc">คุกกี้เนยสดแท้สไตล์เดนิช หอมกลิ่นเนยฟุ้ง กรุบกรอบละลายในปาก</p>
+                        <span class="menu-price">50 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Crispy Almond Tuiles.jpg" alt="Crispy Almond Tuiles">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Crispy Almond Tuiles</h3>
+                        <p class="menu-desc">คุกกี้แผ่นบางเฉียบโรยอัลมอนด์สไลด์ อบจนกรุบกรอบ เคี้ยวเพลินทานง่าย</p>
+                        <span class="menu-price">65 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Mini Lemon Tart.jpg" alt="Mini Lemon Tart">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Mini Lemon Tart</h3>
+                        <p class="menu-desc">เลมอนทาร์ตชิ้นมินิ แป้งทาร์ตกรอบตัดกับตัวครีมเลมอนรสเปรี้ยวจี๊ดสดชื่น</p>
+                        <span class="menu-price">70 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Vanilla Choux Cream.jpg" alt="Vanilla Choux Cream">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Vanilla Choux Cream</h3>
+                        <p class="menu-desc">ชูครีมลูกโต แป้งบางกรอบ สอดไส้ครีมคัสตาร์ดวานิลลาแท้จากฝักธรรมชาติ</p>
+                        <span class="menu-price">40 ฿</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: เครื่องดื่มสูตรพิเศษ (12 เมนู) -->
+        <section id="cat-drinks" class="menu-category-block">
+            <div class="category-header">
+                <h2 class="category-title">
+                    <i class="fa-solid fa-mug-hot"></i> เครื่องดื่มสูตรพิเศษ <span class="en-title">(Specialty Drinks)</span>
+                </h2>
+                <span class="count-badge">12 รายการ</span>
+            </div>
+            
+            <div class="menu-grid">
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <span class="item-badge hot">Best Seller 🔥</span>
+                        <img src="img/Iced Americano.jpg" alt="Iced Americano">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Iced Americano</h3>
+                        <p class="menu-desc">กาแฟอเมริกาโน่เย็น จากเมล็ดอาราบิก้าแท้คั่วกลาง รสชาติเข้มข้นสดชื่น</p>
+                        <span class="menu-price">60 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Iced Latte.jpg" alt="Iced Latte">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Iced Latte</h3>
+                        <p class="menu-desc">กาแฟลาเต้เย็น นมสดแท้ผสมช็อตเอสเพรสโซ่รสนุ่มนวล กลมกล่อม</p>
+                        <span class="menu-price">65 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <span class="item-badge recommend">Recommend ✨</span>
+                        <img src="img/Caramel Macchiato.jpg" alt="Caramel Macchiato">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Caramel Macchiato</h3>
+                        <p class="menu-desc">กาแฟคาราเมลมัคคิอาโต้ หอมหวานคาราเมลสูตรพิเศษแยกชั้นนมสดสวยงาม</p>
+                        <span class="menu-price">75 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Hot Cappuccino.jpg" alt="Hot Cappuccino">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Hot Cappuccino</h3>
+                        <p class="menu-desc">คาปูชิโน่ร้อน ฟองนมนุ่มละมุนหนาหนุ่ม โรยผงโกโก้บางๆ เพิ่มมิติ</p>
+                        <span class="menu-price">60 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Premium Matcha Latte.jpg" alt="Premium Matcha Latte">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Premium Matcha Latte</h3>
+                        <p class="menu-desc">ชาเขียวมัทฉะเย็นพรีเมียม นำเข้าจากอูจิประเทศญี่ปุ่น ผสมนมสดแท้เข้มข้น</p>
+                        <span class="menu-price">75 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Dark Cocoa Supreme.jpg" alt="Dark Cocoa Supreme">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Dark Cocoa Supreme</h3>
+                        <p class="menu-desc">โกโก้เย็นสูตรพรีเมียม รสชาติเข้มข้นดาร์กสะใจ หวานน้อยกลมกล่อม</p>
+                        <span class="menu-price">70 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Traditional Thai Milk Tea.jpg" alt="Traditional Thai Milk Tea">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Traditional Thai Milk Tea</h3>
+                        <p class="menu-desc">ชาไทยเย็นสูตรโบราณ หอมกลิ่นใบชาคั่วเข้มข้น รสหวานมันกำลังดี</p>
+                        <span class="menu-price">65 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Strawberry Sparkle Soda.jpg" alt="Strawberry Sparkle Soda">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Strawberry Sparkle Soda</h3>
+                        <p class="menu-desc">อิตาเลียนโซดาสตรอว์เบอร์รี่ ซ่าสดชื่นตัดเลี่ยนขนมหวานได้เป็นอย่างดี</p>
+                        <span class="menu-price">55 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Yuzu Honey Sparkling.jpg" alt="Yuzu Honey Sparkling">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Yuzu Honey Sparkling</h3>
+                        <p class="menu-desc">ส้มยูซุแท้ผสมน้ำผึ้งป่าและโซดา รสเปรี้ยวหวานหอมกลิ่นยูซุขึ้นจมูก</p>
+                        <span class="menu-price">80 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Peach Earl Grey Iced Tea.jpg" alt="Peach Earl Grey Iced Tea">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Peach Earl Grey Iced Tea</h3>
+                        <p class="menu-desc">ชาเอิร์ลเกรย์กลิ่นส้มมะกรูด ผสมผสานไซรัปพีชเนื้อนุ่ม ชื่นใจผ่อนคลาย</p>
+                        <span class="menu-price">70 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Hot Chocolate Marshmallow.jpg" alt="Hot Chocolate Marshmallow">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Hot Chocolate Marshmallow</h3>
+                        <p class="menu-desc">ช็อกโกแลตร้อนสูตรนุ่มนวล ท็อปด้วยมาร์ชแมลโลว์นุ่มนิ่มละลายในแก้ว</p>
+                        <span class="menu-price">65 ฿</span>
+                    </div>
+                </div>
+                <div class="menu-item-card">
+                    <div class="menu-img-box">
+                        <img src="img/Premium Hojicha Latte.jpg" alt="Premium Hojicha Latte">
+                    </div>
+                    <div class="menu-details">
+                        <h3 class="menu-title">Premium Hojicha Latte</h3>
+                        <p class="menu-desc">ชาเขียวคั่วโฮจิฉะเย็น กลิ่นหอมสโมกกี้เป็นเอกลักษณ์ คล้ายดาร์กช็อกโกแลต</p>
+                        <span class="menu-price">75 ฿</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ส่วนท้ายเว็บไซต์ (Footer) -->
+    <footer>
+        <p>© 2026 Sweet & Sour Bakery. All Rights Reserved. Powered by Sogoodweb Template 434</p>
+    </footer>
+
+    <!-- ระบบทำงานส่วนห้ามสลับแท็บเมนู (JavaScript) -->
+    <script>
+        const filterLinks = document.querySelectorAll('.link-item');
+        filterLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                const active = document.querySelector('.link-item.active-cat');
+                if (active) active.classList.remove('active-cat');
+                this.classList.add('active-cat');
+            });
+        });
+    </script>
+
+</body>
+</html>

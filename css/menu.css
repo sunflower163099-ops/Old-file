@@ -1,0 +1,356 @@
+/* ==========================================================================
+   1. COLOR PALETTE VARIABLES (กำหนดโทนสีเนยอบเดิมของร้าน)
+   ========================================================================== */
+:root {
+    --primary-color: #d4a373;       /* สีน้ำตาลทองเนยอบ */
+    --primary-hover: #b88655;       /* สีน้ำตาลทองเข้ม */
+    --bg-main: #fdfbf7;             /* สีขาวครีมนม */
+    --bg-alt: #fefae0;              /* สีเหลืองนวลอ่อน */
+    --text-heading: #4a3319;        /* สีน้ำตาลเข้มดาร์กช็อกโกแลต */
+    --text-body: #4a4a4a;           /* สีเทาเข้ม */
+    --text-muted: #8e8a84;          /* สีเทาละมุน (ปรับให้อ่านรายละเอียดง่ายขึ้น) */
+    --bg-footer: #222222;           /* สีชาร์โคลดำสนิท */
+    --text-footer: #fdfbf7;
+}
+
+/* ==========================================================================
+   2. BASE SETUP & RESET
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Anuphan', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-body);
+    line-height: 1.6; /* เพิ่มบรรทัดให้อ่านง่าย ไม่เบียดกัน */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   3. HEADER NAVBAR
+   ========================================================================== */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(74, 51, 25, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.logo a {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-body);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover, 
+nav ul li a.active {
+    color: var(--primary-color);
+}
+
+/* ==========================================================================
+   4. HERO BANNER
+   ========================================================================== */
+.menu-banner {
+    background-color: var(--text-heading);
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.banner-content h1 {
+    color: var(--bg-alt);
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.banner-content p {
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+    opacity: 0.85;
+    font-weight: 300;
+}
+
+.btn-banner-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 8px 22px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.btn-banner-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+/* ==========================================================================
+   5. CATEGORY SUMMARY BAR
+   ========================================================================== */
+.menu-summary-bar {
+    background-color: var(--bg-alt);
+    padding: 10px 0;
+    position: sticky;
+    top: 73px; /* ล็อกให้อยู่ใต้ Navbar เวลาเลื่อนดู สะดวกมากๆ */
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.summary-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.total-badge {
+    font-size: 0.95rem;
+    color: var(--text-heading);
+    font-weight: 500;
+}
+
+.highlight-num {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.category-links {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.link-item {
+    text-decoration: none;
+    color: var(--text-body);
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+}
+
+.link-item:hover, .link-item.active-cat {
+    background-color: #ffffff;
+    color: var(--text-heading);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* ==========================================================================
+   6. BOWCAKE STYLE CATALOG CARDS (จัดสัดส่วนใหม่อ่านง่าย สบายตา)
+   ========================================================================== */
+.menu-container {
+    padding: 50px 0;
+}
+
+.menu-category-block {
+    margin-bottom: 70px;
+    scroll-margin-top: 140px; /* ป้องกันไม่ให้หัวข้อโดนแถบเมนูบังเวลาเลื่อนลงมา */
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid rgba(74, 51, 25, 0.08);
+    padding-bottom: 8px;
+    margin-bottom: 30px;
+}
+
+.category-title {
+    color: var(--text-heading);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.en-title {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 300;
+    margin-left: 6px;
+}
+
+.count-badge {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* Grid Layout */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 45px 30px; /* เพิ่มระยะห่างเว้นสเปซแบบพรีเมียม */
+}
+
+/* Card Design แบบมินิมอล */
+.menu-item-card {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+/* กล่องรูปภาพสินค้า (จัตุรัส 1:1 เรียงตัวสมบูรณ์) */
+.menu-img-box {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    background-color: #f2f0ea;
+}
+
+.menu-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.menu-item-card:hover .menu-img-box img {
+    transform: scale(1.03);
+}
+
+/* ป้ายสถานะ */
+.item-badge {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 3px 9px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+.item-badge.hot { background-color: #d96a6a; }
+.item-badge.recommend { background-color: #6fa397; }
+
+/* รายละเอียดข้อความ (เน้นความชัดเจนและแบ่งวรรคตอนให้อ่านง่าย) */
+.menu-details {
+    padding-top: 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-title {
+    font-size: 1.05rem;
+    color: var(--text-heading);
+    font-weight: 600;
+    margin-bottom: 5px; /* ดึงช่องว่างห่างจากคำอธิบายเล็กน้อย */
+}
+
+.menu-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 300;
+    line-height: 1.5;
+    max-width: 95%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* จำกัดไว้ที่ 2 บรรทัดป้องกันความเหลื่อม */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 38px;
+    margin-bottom: 6px;
+}
+
+.menu-price {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   7. FOOTER
+   ========================================================================== */
+footer {
+    background-color: var(--bg-footer);
+    color: var(--text-footer);
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+/* ==========================================================================
+   8. RESPONSIVE DESIGN (ปรับหน้าจอมือถือให้สวยงาม)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 0;
+    }
+    nav ul {
+        gap: 15px;
+    }
+    .menu-banner {
+        padding: 45px 0;
+    }
+    .banner-content h1 {
+        font-size: 1.8rem;
+    }
+    .menu-summary-bar {
+        top: 100px;
+    }
+    .summary-box {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .category-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+    .menu-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* มือถือเรียงสองคอลัมน์ได้สวยพอดี */
+        gap: 30px 15px;
+    }
+    .menu-title {
+        font-size: 0.95rem;
+    }
+}
